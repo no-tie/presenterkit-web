@@ -1,0 +1,17 @@
+{
+  "name": "presenterkit",
+  "version": "1.0.0",
+  "description": "PresenterKit website",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "rm -rf dist && parcel build && cp static/* dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 2 Chrome versions, last 2 Safari major versions, last 2 iOS major versions",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
