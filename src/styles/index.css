@@ -1,0 +1,7 @@
+@import './core/colors.css';
+@import './core/fonts.css';
+@import './core/global.css';
+@import './core/scrollbar.css';
+
+@import './modules/nav.css';
+@import './modules/home.css';

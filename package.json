@@ -4,14 +4,18 @@
   "description": "PresenterKit website",
   "source": "src/index.html",
   "scripts": {
-    "dev": "parcel",
-    "build": "rm -rf dist && parcel build && cp static/* dist"
+    "dev": "parcel --host 0.0.0.0",
+    "build": "rm -rf dist && parcel build && cp -r static/* src/assets dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "browserslist": "last 2 Chrome versions, last 2 Safari major versions, last 2 iOS major versions",
   "devDependencies": {
+    "lil-gui": "^0.19.2",
     "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "three": "^0.165.0"
   }
 }

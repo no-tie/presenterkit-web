@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Inter Display';
+    src: url('/src/assets/fonts/InterDisplay-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    src: url('/src/assets/fonts/InterDisplay-Medium.woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    src: url('/src/assets/fonts/InterDisplay-SemiBold.woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter Display';
+    src: url('/src/assets/fonts/InterDisplay-Bold.woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+/* *:before, */
+*:after {
+    font-family: 'Inter Display', -apple-system, system-ui, BlinkMacSystemFont, Helvetica, sans-serif;
+}
+
+body {
+    font-family: 'Inter Display', -apple-system, system-ui, BlinkMacSystemFont, Helvetica, sans-serif;
+}

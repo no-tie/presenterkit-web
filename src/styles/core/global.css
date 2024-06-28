@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}    
+
+*::selection {
+    background-color: transparent;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: #141622;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, p, input {
+    margin: 0;
+    color: var(--lbl-1);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    color: var(--lbl-1);
+    background-color: transparent;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--input-lbl);
+}
+
+input::selection, textarea::selection {
+    background-color: var(--fill-1);
+}
+
+/* react-three-gui */
+
+.hufbEg {
+    color: var(--black);
+}
