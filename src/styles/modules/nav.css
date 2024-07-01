@@ -6,6 +6,7 @@ nav {
     top: 20px;
     height: 56px;
     width: 100%;
+    z-index: 1;
 }
 
 .nav-content {
@@ -15,11 +16,10 @@ nav {
     border-radius: 28px;
     background-color: var(--fill-4);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     box-shadow: rgba(32, 33, 36, 0.15) 0px 1px 2px 0px, rgba(32, 33, 36, 0.08) 0px 1px 8px 0px; /* Adjust needed */
-
+    
     .nav-item {
-        align-items: center;
-        justify-content: center;
         height: 40px;
         padding: 0 20px;
         border-radius: 20px;
@@ -29,6 +29,10 @@ nav {
         &:hover {
             background-color: var(--fill-4);
         }
+    }
+
+    .nav-home:hover {
+        background-color: transparent;
     }
 
     .nav-btn {

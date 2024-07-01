@@ -187,5 +187,120 @@ section {
 
 
 .guide {
+    align-items: center;
+    margin-top: 100px;
+
+    .headline {
+        font-size: 64px;
+        font-weight: 600;
+    }
+
+    .cards {
+        flex-direction: row;
+        gap: var(--grid-gap);
+        width: var(--content-width);
+        margin-top: 100px;
+    }
+
+    .card {
+        justify-content: space-between;
+        position: relative;
+        width: var(--card-width);
+        height: 670px;
+        padding: 60px;
+        border-radius: 18px;
+        background-color: var(--fill-3);
+
+        img {
+            align-self: center;
+            width: 320px;
+        }
+
+        h3 {
+            font-size: 48px;
+            font-weight: 600;
+        }
+
+        .add-btn {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .card-l-1 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: var(--content-width);
+        height: 550px;
+        margin-top: 20px;
+        border-radius: 18px;
+        background-color: var(--fill-3);
+        overflow: hidden;
+
+        .img-cont {
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        .card-img {
+            height: 504px;
+            border-top: 8px solid var(--spt-no);
+            border-left: 8px solid var(--spt-no);
+            border-top-left-radius: 18px;
+
+        }
+
+        h3 {
+            font-size: 48px;
+            font-weight: 600;
+            padding: 60px;
+        }
+    }
+
+    .card-l-2 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: var(--content-width);
+        height: 550px;
+        margin-top: 20px;
+        border-radius: 18px;
+        background-color: var(--fill-3);
+        overflow: hidden;
+
+        .img-cont {
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        .card-img {
+            height: 504px;
+            border-top: 10px solid var(--spt-no);
+            border-right: 10px solid var(--spt-no);
+            border-top-right-radius: 18px;
+
+        }
+
+        h3 {
+            font-size: 48px;
+            font-weight: 600;
+            padding: 60px;
+        }
+    }
+}
+
+
+
+.features {
+    align-items: center;
     margin-top: 100px;
 }
