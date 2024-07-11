@@ -4,7 +4,7 @@
   "description": "PresenterKit website",
   "source": "src/index.html",
   "scripts": {
-    "dev": "parcel --host 0.0.0.0",
+    "dev": "parcel --no-hmr --host 0.0.0.0",
     "build": "rm -rf dist && parcel build && cp -r static/* src/assets dist"
   },
   "keywords": [],
