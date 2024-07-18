@@ -8,7 +8,7 @@
     "build": "rm -rf dist && parcel build && cp -r static/* src/assets dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ali Mammadli & Sevil Rasulova",
   "license": "ISC",
   "browserslist": "last 2 Chrome versions, last 2 Safari major versions, last 2 iOS major versions",
   "devDependencies": {
