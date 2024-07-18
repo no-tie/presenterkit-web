@@ -3,7 +3,6 @@ import Stats from 'three/examples/jsm/libs/stats.module.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { RectAreaLightUniformsLib } from 'three/examples/jsm/lights/RectAreaLightUniformsLib.js'
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js'
-import { GUI } from 'lil-gui'
 
 
 
@@ -22,10 +21,6 @@ const slideMtl = new THREE.MeshBasicMaterial({ toneMapped: false })
 const mount = document.getElementById('three')
 
 const stats = new Stats()
-// document.body.appendChild(stats.dom)
-
-// const gui = new GUI()
-
 
 
 
@@ -93,57 +88,21 @@ const addCamCon = () => {
 
     controls = new OrbitControls(camera, renderer.domElement)
     controls.enablePan = false
-    controls.enableRotate = false
+    controls.enableZoom = false
+    
+    controls.minAzimuthAngle = - Math.PI / 3
+    controls.maxAzimuthAngle = Math.PI / 3
+    controls.minPolarAngle = Math.PI / 3
+    controls.maxPolarAngle = Math.PI / 2
 
     if (isMobile) {
-        controls.minDistance = 5
-        // controls.maxDistance = 50
+        controls.minDistance = 18
     } else {
-        controls.minDistance = 3
-        controls.maxDistance = 20
+        controls.minDistance = 20
     }
 
     controls.update()
     onWindowResize()
-
-
-
-    // Zoom
-    const onZoom = () => {
-        const scrollLimit = isMobile ? 18 : 20
-        const distance = controls.getDistance()
-        // console.log({ distance })
-
-        if (distance > 3) { slideMtl.map = slideImgs[0]; slideMtl.needsUpdate = true }
-        if (3 < distance && distance > 6) { slideMtl.map = slideImgs[1]; slideMtl.needsUpdate = true }
-        if (6 < distance && distance > 9) { slideMtl.map = slideImgs[2]; slideMtl.needsUpdate = true }
-        if (9 < distance && distance > 12) { slideMtl.map = slideImgs[3]; slideMtl.needsUpdate = true }
-        if (12 < distance && distance > 15) { slideMtl.map = slideImgs[4]; slideMtl.needsUpdate = true }
-        if (15 < distance && distance > 18) { slideMtl.map = slideImgs[5]; slideMtl.needsUpdate = true }
-        if (distance >= scrollLimit) controls.enableZoom = false
-    }
-
-    controls.addEventListener('change', onZoom)
-
-
-
-    // Scroll
-    let scrollY = 0
-    let ticking = false
-
-    const onScroll = (scrollPos) => {
-        console.log(scrollPos === 0)
-        if (scrollPos <= 0) {
-            controls.enableZoom = true
-            mount.style.removeProperty('pointer-events')
-            camera.position.set(0, 0, 19.99)
-        }
-    }
-
-    document.addEventListener('scroll', () => {
-        scrollY = window.scrollY
-        if (!ticking) { window.requestAnimationFrame(() => { onScroll(scrollY); ticking = false }); ticking = true }
-    })
 }
 
 
@@ -154,19 +113,9 @@ const addLights = () => {
     const aLight = new THREE.AmbientLight(0xffffff, 0.35)
     scene.add(aLight)
 
-    // const dLight = new THREE.DirectionalLight(0xffffff, 0.7)
-    // dLight.position.set(0, 5, 10)
-    // scene.add(dLight)
-
-    // const dLightHelper = new THREE.DirectionalLightHelper(dLight, 5)
-    // scene.add(dLightHelper)
-
     const sLight = new THREE.SpotLight(0xffffff, 60, 9, Math.PI / 9)
     sLight.position.set(0, 3, 5)
     scene.add(sLight)
-
-    // const sLightHelper = new THREE.SpotLightHelper(sLight, 5)
-    // scene.add(sLightHelper)
 }
 
 
@@ -184,6 +133,13 @@ const addScene = () => {
     const board = new THREE.Mesh(new THREE.PlaneGeometry(9.6, 5.4), slideMtl)
     board.position.set(0, 0.5, -2)
     scene.add(board)
+    
+    let index = 0
+
+    setInterval(() => {
+        slideMtl.map = slideImgs[index]; slideMtl.needsUpdate = true
+        index = index % 5 + 1
+    }, 3000)
 
 
     const rectLight = new THREE.RectAreaLight(0xffffff, 1, 9.6, 5.4)
@@ -254,27 +210,8 @@ const onWindowResize = () => {
 }
 
 
-var yDown = null
-
-const onTouchStart = (e) => {
-    yDown = e.touches[0].clientY
-}
-
-const onTouchMove = (e) => {
-    if (!yDown) return
-
-    const yUp = e.touches[0].clientY
-    const yDiff = yDown - yUp
-
-    if (controls.getDistance() < 20) camera.position.set(0, 0, camera.position.z + (yDiff / 500))
-    else mount.style.pointerEvents = 'none'
-}
-
-
 const addListeners = () => {
     window.addEventListener('resize', onWindowResize, false)
-    document.addEventListener('touchstart', onTouchStart)
-    document.addEventListener('touchmove', onTouchMove)
 }
 
 

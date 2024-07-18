@@ -38,6 +38,12 @@ h1, h2, h3, h4, h5, h6, p, input {
     color: var(--lbl-1);
 }
 
+a {
+    all: unset;
+    color: var(--link);
+    cursor: pointer;
+}
+
 button {
     cursor: pointer;
     border: none;

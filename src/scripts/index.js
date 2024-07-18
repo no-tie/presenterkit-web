@@ -1,3 +1,6 @@
 import { init } from './scene'
+import { download } from './download'
 
-// init()
+
+download()
+init()
