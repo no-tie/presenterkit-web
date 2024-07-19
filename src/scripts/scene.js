@@ -203,9 +203,9 @@ const addScene = () => {
 // MARK: Listeners
 
 const onWindowResize = () => {
-    camera.aspect = isMobile ? 9 / 16 : 16 / 9
+    camera.aspect = isMobile ? 7 / 9 : 16 / 9
     camera.updateProjectionMatrix()
-    renderer.setSize(window.innerWidth, window.innerWidth * (isMobile ? 16 / 9 : 9 / 16))
+    renderer.setSize(window.innerWidth, window.innerWidth * (isMobile ? 9 / 7 : 9 / 16))
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 }
 
