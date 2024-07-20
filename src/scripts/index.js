@@ -1,8 +1,8 @@
 import { init } from './scene'
 import { download } from './download'
-import { posthog } from './posthog'
+import { initPosthog } from './posthog'
 
 
 download()
 init()
-posthog()
+initPosthog()
