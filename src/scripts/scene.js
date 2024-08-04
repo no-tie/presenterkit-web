@@ -49,7 +49,7 @@ const roundedRect = (x, y, width, height, radius) => {
 
 // MARK: Init
 
-export const init = () => {
+export const initScene = () => {
     addRenderer()
     addCamCon()
     addLights()
