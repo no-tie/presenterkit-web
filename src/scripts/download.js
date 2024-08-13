@@ -5,8 +5,9 @@ export const initDownload = () => {
     const btnNav = document.getElementById('dwld-btn-nav')
     const btnHero = document.getElementById('dwld-btn-hero')
 
-    const win_url = 'https://github.com/no-tie/presenterkit-app/releases/download/1.0.0/PresenterKit.Setup.1.0.0.exe'
-    const mac_url = 'https://github.com/no-tie/presenterkit-app/releases/download/1.0.0/PresenterKit-1.0.0-arm64.dmg'
+    const version = '1.0.4'
+    const win_url = `https://github.com/no-tie/presenterkit-app/releases/download/${version}/PresenterKit-Setup-${version}.exe`
+    const mac_url = `https://github.com/no-tie/presenterkit-app/releases/download/${version}/PresenterKit-${version}-arm64.dmg`
     let dwld_url = ''
 
     const UA = navigator.userAgent
