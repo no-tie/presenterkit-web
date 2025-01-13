@@ -73,6 +73,12 @@ body {
             }
         }
     }
+    
+    .card:hover .modal {
+        visibility: visible;
+        opacity: 1;
+        transition: var(--vis-transition);
+    }
 
 
 
@@ -226,6 +232,21 @@ body {
             }
         }
 
+        .subtitle {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 36px;
+            text-align: center;
+            margin-top: 72px;
+            width: 560px;
+
+            @media (max-width: 1020px) {
+                font-size: 44px;
+                line-height: 52px;
+                margin-top: 38px;
+            }
+        }
+
         .cta-btn {
             font-size: 17px;
             font-weight: 500;
@@ -237,6 +258,11 @@ body {
             @media (max-width: 1020px) {
                 margin: 36px 0 10px;
             }
+        }
+
+        .btn-hover:hover {
+            background-color: var(--tint);
+            opacity: 0.6;
         }
 
         .btn-info {
