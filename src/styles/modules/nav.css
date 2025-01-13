@@ -39,6 +39,10 @@ nav {
         }
     }
 
+    .nav-home {
+        padding-left: 5px;
+    }
+
     .nav-home:hover {
         background-color: transparent;
     }

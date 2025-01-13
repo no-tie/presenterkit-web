@@ -3,8 +3,8 @@
 
 <head>
     <meta charset='UTF-8'>
-    <meta name='description' content='Boost interactivity even offline. Slide Share and 3D Messaging.'>
-    <meta name='keywords' content='boost interactivity, offline presentation tool, slide share, Q&A'>
+    <meta name='description' content='Real-Time Interaction, Slide Sharing, and Presentation Management.'>
+    <meta name='keywords' content='real-time interaction, presentation management, slide share, Q&A'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
     <link rel='icon' type='image/svg+xml' href='assets/icons/logo.svg' />
@@ -12,21 +12,21 @@
     <script type='module' src='scripts/index.js'></script>
 
     <meta property='og:site_name' content='PresenterKit' />
-    <meta property='og:title' content='Connect audience offline.' />
-    <meta property='og:description' content='PresenterKit lets 👩🏻‍💻 share slides and 💬 communicate with audience in 🔴 offline.' />
-    <meta property='og:url' content='https://presenterkit.netlify.app' />
-    <meta property='og:logo' content='https://presenterkit.netlify.app/assets/imgs/og-logo.png' />
+    <meta property='og:title' content='Designed for Presenters, Built for Impact.' />
+    <meta property='og:description' content='Real-Time Interaction, Slide Sharing, and Presentation Management.' />
+    <meta property='og:url' content='https://presenterkit.app' />
+    <meta property='og:logo' content='https://presenterkit.app/assets/imgs/og-logo.png' />
 
     <meta property='og:type' content='video.other' />
-    <meta property='og:video' content='https://presenterkit.netlify.app/assets/videos/hero.mp4' />
-    <meta property='og:video:url' content='https://presenterkit.netlify.app/assets/videos/hero.mp4' />
-    <meta property='og:video:secure_url' content='https://presenterkit.netlify.app/assets/videos/hero.mp4' />
+    <meta property='og:video' content='https://presenterkit.app/assets/videos/hero.mp4' />
+    <meta property='og:video:url' content='https://presenterkit.app/assets/videos/hero.mp4' />
+    <meta property='og:video:secure_url' content='https://presenterkit.app/assets/videos/hero.mp4' />
     <meta property='og:video:type' content='video/mp4' />
     <meta property='og:video:width' content='1920' />
     <meta property='og:video:height' content='1080' />
 
-    <meta property='og:image' content='https://presenterkit.netlify.app/assets/imgs/og-preview.png'>
-    <meta property='og:image:secure_url' content='https://presenterkit.netlify.app/assets/imgs/og-preview.png'>
+    <meta property='og:image' content='https://presenterkit.app/assets/imgs/og-preview.png'>
+    <meta property='og:image:secure_url' content='https://presenterkit.app/assets/imgs/og-preview.png'>
     <meta property='og:image:width' content='1920'>
     <meta property='og:image:height' content='1080'>
     <meta property='og:image:type' content='image/png'>
@@ -41,6 +41,7 @@
         <div class='nav-content'>
             <a href='#hero' class='nav-item nav-home'>
                 <div class='logo'>
+                    <img src='assets/icons/logo.svg' alt='logo'>
                     <h3>PresenterKit</h3>
                 </div>
             </a>
@@ -48,7 +49,7 @@
             <a href='#features' class='nav-item'>Features</a>
             <a href='#guide' class='nav-item'>Guide</a>
             <a href='#demo' class='nav-item'>Demo</a>
-            <button class='nav-item nav-btn btn-hover' id='dwld-btn-nav'>Download</button>
+            <button class='nav-item nav-btn btn-hover' id='dwld-btn-nav'>Get Started</button>
         </div>
     </nav>
 
@@ -57,16 +58,11 @@
     <!-- Hero -->
     <section id='hero' class='hero-section'>
         <div class='hero'>
-            <div class='logo'>
-                <img src='assets/icons/logo.svg' alt='logo'>
-                <h3>PresenterKit</h3>
-            </div>
-            <h2 class='title'>Boost interactivity even offline.<br>Slide Share & 3D Messaging.</h2>
-            <button class='cta-btn btn-hover' id='dwld-btn-hero'>Download</button>
+            <h2 class='title'>Designed for Presenters.<br>Built for Impact.</h2>
+            <h3 class='subtitle'>Real-Time Interaction, Slide Sharing, and Presentation Management.</h3>
+            <button class='cta-btn btn-hover' id='dwld-btn-hero'>Get Started</button>
             <div class='btn-info'>
-                <small>Available on</small>
-                <img class='mac' src='assets/icons/logo-apple.svg' alt='Apple logo'>
-                <img class='win' src='assets/icons/logo-win.svg' alt='Windows logo'>
+                <small>It's completely free!</small>
             </div>
 
             <video class='video' muted autoplay loop src='assets/videos/hero.mp4'></video>
@@ -112,9 +108,6 @@
                             between without interrupting process. Audience track slide pages live on their device.
                         </p>
                     </div>
-                    <label class='modal-btn' for='toggle-5'>
-                        <img class='ic-add' src='assets/icons/ic-add-circle.svg' alt='Expand'>
-                    </label>
                 </div>
                 <div class='card f2'>
                     <h3>Easy access for audience.</h3>
@@ -129,9 +122,6 @@
                             real-time. Audience can see all slides and download them to deep dive into details later.
                         </p>
                     </div>
-                    <label class='modal-btn' for='toggle-6'>
-                        <img class='ic-add' src='assets/icons/ic-add-circle.svg' alt='Expand'>
-                    </label>
                 </div>
                 <div class='card f3'>
                     <h3>Send questions. <br> No interruption.</h3>
@@ -147,9 +137,6 @@
                             messages.
                         </p>
                     </div>
-                    <label class='modal-btn' for='toggle-7'>
-                        <img class='ic-add' src='assets/icons/ic-add-circle.svg' alt='Expand'>
-                    </label>
                 </div>
                 <div class='card f4'>
                     <h3>Send resources <br> to everyone.</h3>
@@ -165,9 +152,6 @@
                             is advisable prepare and check all shares before event starts.
                         </p>
                     </div>
-                    <label class='modal-btn' for='toggle-9'>
-                        <img class='ic-add' src='assets/icons/ic-add-circle.svg' alt='Expand'>
-                    </label>
                 </div>
                 <div class='card f5'>
                     <h3>Add moderators <br> to approve <br> messages and <br> share resources.</h3>
@@ -182,9 +166,6 @@
                             or remove moderators.
                         </p>
                     </div>
-                    <label class='modal-btn' for='toggle-10'>
-                        <img class='ic-add' src='assets/icons/ic-add-circle.svg' alt='Expand'>
-                    </label>
                 </div>
                 <div class='card f6'>
                     <h3>Show messages <br> with filtering.</h3>
@@ -199,9 +180,6 @@
                             ones to all participants.
                         </p>
                     </div>
-                    <label class='modal-btn' for='toggle-8'>
-                        <img class='ic-add' src='assets/icons/ic-add-circle.svg' alt='Expand'>
-                    </label>
                 </div>
             </div>
         </div>
@@ -213,7 +191,7 @@
     <section id='guide'>
         <div class='guide'>
             <h2 class='headline'>How to use?</h2>
-            <div class='cards'>
+            <!-- <div class='cards'>
                 <div class='card'>
                     <h3>Join Wi-Fi <br> if available.</h3>
                     <img class='card-img' src='assets/imgs/guide-1.png' alt='Router'>
@@ -228,9 +206,6 @@
                             higher.
                         </p>
                     </div>
-                    <label class='modal-btn' for='toggle-3'>
-                        <img class='ic-add' src='assets/icons/ic-add-circle.svg' alt='Expand'>
-                    </label>
                 </div>
                 <div class='card'>
                     <h3>Or create it with portable router.</h3>
@@ -250,11 +225,8 @@
                             </a>
                         </p>
                     </div>
-                    <label class='modal-btn' for='toggle-4'>
-                        <img class='ic-add' src='assets/icons/ic-add-circle.svg' alt='Expand'>
-                    </label>
                 </div>
-            </div>
+            </div> -->
             <div class='card-l-1'>
                 <h3>Enter connected <br> Wi-Fi credentials <br> for audience to <br> scan QR and join.</h3>
                 <div class='img-cont'>

@@ -1,8 +1,8 @@
 import { initScene } from './scene'
-import { initDownload } from './download'
+import { initCTA } from './download'
 import { initPosthog } from './posthog'
 
 
 initPosthog()
-initDownload()
+initCTA()
 initScene()
