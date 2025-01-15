@@ -14,7 +14,8 @@
   "browserslist": "last 2 Chrome versions, last 2 Safari major versions, last 2 iOS major versions",
   "devDependencies": {
     "lil-gui": "^0.19.2",
-    "parcel": "^2.12.0"
+    "parcel": "^2.12.0",
+    "svgo": "^3.3.2"
   },
   "dependencies": {
     "posthog-js": "^1.154.2",
