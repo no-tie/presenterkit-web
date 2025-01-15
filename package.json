@@ -5,7 +5,7 @@
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel --no-hmr --host 0.0.0.0",
-    "build": "parcel build",
+    "build": "parcel build && cp -r static/* src/assets dist",
     "bundle": "rm -rf dist && parcel build && cp -r static/* src/assets dist"
   },
   "keywords": [],
