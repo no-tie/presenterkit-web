@@ -5,7 +5,8 @@
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel --no-hmr --host 0.0.0.0",
-    "build": "rm -rf dist && parcel build && cp -r static/* src/assets dist"
+    "build": "parcel build",
+    "bundle": "rm -rf dist && parcel build && cp -r static/* src/assets dist"
   },
   "keywords": [],
   "author": "Ali Mammadli & Sevil Rasulova",
